@@ -38,5 +38,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: main
+          folder: build
